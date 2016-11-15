@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: SalesTaxes/SalesTaxes.xcodeproj
+xcode_scheme: SalesTaxes
+xcode_sdk: iphonesimulator10.0
