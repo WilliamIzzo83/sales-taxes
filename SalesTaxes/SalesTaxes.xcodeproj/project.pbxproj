@@ -160,8 +160,7 @@
 				TargetAttributes = {
 					3DD93D221DDBA6FB0091569A = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = YKG328YCR6;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					3DD93D3B1DDBA6FB0091569A = {
 						CreatedOnToolsVersion = 8.1;
@@ -351,7 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YKG328YCR6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SalesTaxes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wizzo.SalesTaxes;
@@ -363,7 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YKG328YCR6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SalesTaxes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wizzo.SalesTaxes;
@@ -416,6 +415,7 @@
 				3DD93D471DDBA6FB0091569A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DD93D481DDBA6FB0091569A /* Build configuration list for PBXNativeTarget "SalesTaxesTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +424,7 @@
 				3DD93D4A1DDBA6FB0091569A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
