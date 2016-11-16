@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+
 NS_ASSUME_NONNULL_BEGIN
+
+FOUNDATION_EXTERN NSExceptionName const kApplicableTaxRuleExcPercentageInterval;
 
 /**
  * Defines a rule used from TaxCalculator while computing the amount of
