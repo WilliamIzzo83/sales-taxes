@@ -18,4 +18,16 @@
     self->_taxesAmount = [taxesAmount copy];
     return self;
 }
+
+- (BOOL)isEqual:(id)object {
+    if (![object isKindOfClass:[TaxCalculatorResult class]]) {
+        return NO;
+    }
+    
+    TaxCalculatorResult* other = (TaxCalculatorResult*)other;
+    
+    return [self.originalPrice isEqual:other.originalPrice] &&
+    [self.taxedPrice isEqual:other.taxedPrice] &&
+    [self.taxesAmount isEqual:other.taxesAmount];
+}
 @end
