@@ -7,28 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ApplicableTaxRule.h"
+#import "ApplicableTax.h"
 #import "TaxCalculatorItem.h"
 #import "TaxCalculatorResult.h"
 
-/// Type defining an array of rules used by TaxCalculator
-typedef NSArray<ApplicableTaxRule*> TaxCalculatorRules;
+typedef NSArray<ApplicableTax*> TaxCalculatorApplicableTaxes;
+
 
 /**
  * Defines an object capable of apply taxes on a given price.
  * @par In order to support different kind of taxes, it is possible to
- * define a set of rules that instructs the object about how to modify the given
- * price.
+ * define a set of applicable taxes. TaxCalculator will then apply each tax to
+ * the item.
  */
 @interface TaxCalculator : NSObject
 /**
  * Initializes the tax calculator.
- * @param rules A set of rule used by tax calculator instance.
+ * @param applicableTaxes An array of applicable taxes.
  * @return TaxCalculator instance.
  */
-- (instancetype)initWithRules:(TaxCalculatorRules*)rules;
+- (instancetype)initWithApplicableTaxes:(TaxCalculatorApplicableTaxes*)applicableTaxes
+NS_DESIGNATED_INITIALIZER;
 /**
  * Computes taxes for a specific item.
+ * @note For each ApplicableTax the computation will use the first tax rule as
+ * ßdefault.
  * @param item Item subject to computation.
  * @return TaxCalculatorResult instance, containing computation's results.
  */

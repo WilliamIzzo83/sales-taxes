@@ -9,37 +9,38 @@
 #import "TaxCalculator.h"
 
 @interface TaxCalculator()
-@property (strong, nonatomic) TaxCalculatorRules* rules;
+@property (strong, nonatomic) TaxCalculatorApplicableTaxes* applicableTaxes;
 @end
 
 @implementation TaxCalculator
-- (instancetype)initWithRules:(TaxCalculatorRules *)rules {
-    self = [super init];
-    self->_rules = [TaxCalculatorRules arrayWithArray:rules];
+
+- (instancetype)init {
+    self = [self initWithApplicableTaxes:(TaxCalculatorApplicableTaxes*)@[]];
     return self;
 }
+
+- (instancetype)initWithApplicableTaxes:(TaxCalculatorApplicableTaxes*)applicableTaxes {
+    self = [super init];
+    self->_applicableTaxes = [TaxCalculatorApplicableTaxes
+                              arrayWithArray:applicableTaxes];
+    return self;
+}
+
 
 - (TaxCalculatorResult*)computeTaxesOnItem:(TaxCalculatorItem *)item {
     
     
     __block NSDecimalNumber* totalTaxesAmount = [NSDecimalNumber zero];
     
-    // A rule is applicable if item properties contains rule identifier.
-    [self.rules enumerateObjectsUsingBlock:^(ApplicableTaxRule * _Nonnull obj,
-                                             NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        if (![item.properties containsObject:obj.identifier]) {
-            return;
-        }
-        
-        NSDecimalNumber* taxAmount = [obj applicableTaxToPrice:item.price];
-        
-        totalTaxesAmount = [taxAmount decimalNumberByAdding:totalTaxesAmount];
+    
+    [self.applicableTaxes enumerateObjectsUsingBlock:
+     ^(ApplicableTax * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+         NSDecimalNumber* taxAmount = [obj applicableTaxAmountForItem:item];
+         totalTaxesAmount = [taxAmount decimalNumberByAdding:totalTaxesAmount];
     }];
     
-    
-    NSDecimalNumber *taxedPrice = [totalTaxesAmount
-                                   decimalNumberByAdding:item.price];
+    NSDecimalNumber *taxedPrice = [item.price
+                                   decimalNumberByAdding:totalTaxesAmount];
     
     return [[TaxCalculatorResult alloc] initWithOriginalPrice:item.price
                                                    taxedPrice:taxedPrice

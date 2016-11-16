@@ -9,14 +9,30 @@
 #import <XCTest/XCTest.h>
 #import "TaxCalculator.h"
 @interface TaxCalculatorTests : XCTestCase
-
+@property (strong, nonatomic) NSArray<TaxCalculatorItem*>* mockItemsInput1;
+@property (strong, nonatomic) NSArray<NSDecimalNumber*>* mockItemsInput1Results;
 @end
 
 @implementation TaxCalculatorTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.mockItemsInput1 = (NSArray<TaxCalculatorItem*>*)
+    @[
+      [[TaxCalculatorItem alloc] initWithPrice:[[NSDecimalNumber alloc] initWithDouble:12.49]
+                                 andProperties:@[@"books"]],
+      [[TaxCalculatorItem alloc] initWithPrice:[[NSDecimalNumber alloc] initWithDouble:14.99]
+                                 andProperties:@[@"music"]],
+      [[TaxCalculatorItem alloc] initWithPrice:[[NSDecimalNumber alloc] initWithInt:0.85]
+                                 andProperties:@[@"food"]]
+      ];
+    
+    self.mockItemsInput1Results = (NSArray<NSDecimalNumber*>*)
+    @[
+      [[NSDecimalNumber alloc] initWithDouble:12.49],
+      [[NSDecimalNumber alloc] initWithDouble:16.49],
+      [[NSDecimalNumber alloc] initWithDouble:0.85]
+      ];
 }
 
 - (void)tearDown {
@@ -35,5 +51,27 @@
     
     
     XCTAssert([applicableTax isEqualToNumber:@(20.0)], @"Applicable tax rule test failed");
+}
+
+- (void)testApplicableTax {
+    ApplicableTaxRule* defaultRule = [[ApplicableTaxRule alloc]
+                                    initWithIdentifier:@"default"
+                                    andPercentage:[[NSDecimalNumber alloc] initWithDouble:10.0]];
+
+    ApplicableTaxRule* booksRule = [[ApplicableTaxRule alloc]
+                                    initWithIdentifier:@"books"
+                                    andPercentage:[NSDecimalNumber zero]];
+    ApplicableTaxRule* foodRule = [[ApplicableTaxRule alloc]
+                                    initWithIdentifier:@"food"
+                                    andPercentage:[NSDecimalNumber zero]];
+    
+    TaxCalculatorRules* rules = @[defaultRule, booksRule, foodRule];
+    
+    ApplicableTax* tax = [[ApplicableTax alloc]
+                          initWithIdentifier:@"basic"
+                          andTaxRules:rules];
+    
+    
+    
 }
 @end
