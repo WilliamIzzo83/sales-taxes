@@ -14,6 +14,12 @@
 		3DD93D331DDBA6FB0091569A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD93D321DDBA6FB0091569A /* Assets.xcassets */; };
 		3DD93D361DDBA6FB0091569A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD93D341DDBA6FB0091569A /* LaunchScreen.storyboard */; };
 		3DD93D411DDBA6FB0091569A /* SalesTaxesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D401DDBA6FB0091569A /* SalesTaxesTests.m */; };
+		3DD93D4E1DDBB8630091569A /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D4D1DDBB8630091569A /* Product.m */; };
+		3DD93D531DDBBAF10091569A /* ApplicableTaxRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D521DDBBAF10091569A /* ApplicableTaxRule.m */; };
+		3DD93D571DDBC4DB0091569A /* TaxCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D561DDBC4DB0091569A /* TaxCalculator.m */; };
+		3DD93D5A1DDBC5E40091569A /* TaxCalculatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D591DDBC5E40091569A /* TaxCalculatorItem.m */; };
+		3DD93D5D1DDBC7ED0091569A /* TaxCalculatorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D5C1DDBC7ED0091569A /* TaxCalculatorResult.m */; };
+		3DD93D5F1DDBCE8C0091569A /* TaxCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D5E1DDBCE8C0091569A /* TaxCalculatorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,17 @@
 		3DD93D3C1DDBA6FB0091569A /* SalesTaxesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesTaxesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD93D401DDBA6FB0091569A /* SalesTaxesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaxesTests.m; sourceTree = "<group>"; };
 		3DD93D421DDBA6FB0091569A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DD93D4C1DDBB8630091569A /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = models/Product.h; sourceTree = "<group>"; };
+		3DD93D4D1DDBB8630091569A /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = models/Product.m; sourceTree = "<group>"; };
+		3DD93D511DDBBAF10091569A /* ApplicableTaxRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicableTaxRule.h; path = support/TaxCalculator/ApplicableTaxRule.h; sourceTree = "<group>"; };
+		3DD93D521DDBBAF10091569A /* ApplicableTaxRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicableTaxRule.m; path = support/TaxCalculator/ApplicableTaxRule.m; sourceTree = "<group>"; };
+		3DD93D551DDBC4DB0091569A /* TaxCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxCalculator.h; path = support/TaxCalculator/TaxCalculator.h; sourceTree = "<group>"; };
+		3DD93D561DDBC4DB0091569A /* TaxCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxCalculator.m; path = support/TaxCalculator/TaxCalculator.m; sourceTree = "<group>"; };
+		3DD93D581DDBC5E40091569A /* TaxCalculatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxCalculatorItem.h; path = support/TaxCalculator/TaxCalculatorItem.h; sourceTree = "<group>"; };
+		3DD93D591DDBC5E40091569A /* TaxCalculatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxCalculatorItem.m; path = support/TaxCalculator/TaxCalculatorItem.m; sourceTree = "<group>"; };
+		3DD93D5B1DDBC7ED0091569A /* TaxCalculatorResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxCalculatorResult.h; path = support/TaxCalculator/TaxCalculatorResult.h; sourceTree = "<group>"; };
+		3DD93D5C1DDBC7ED0091569A /* TaxCalculatorResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxCalculatorResult.m; path = support/TaxCalculator/TaxCalculatorResult.m; sourceTree = "<group>"; };
+		3DD93D5E1DDBCE8C0091569A /* TaxCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxCalculatorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +98,8 @@
 		3DD93D251DDBA6FB0091569A /* SalesTaxes */ = {
 			isa = PBXGroup;
 			children = (
+				3DD93D4F1DDBBAA70091569A /* support */,
+				3DD93D4B1DDBB8310091569A /* models */,
 				3DD93D291DDBA6FB0091569A /* AppDelegate.h */,
 				3DD93D2A1DDBA6FB0091569A /* AppDelegate.m */,
 				3DD93D2C1DDBA6FB0091569A /* ViewController.h */,
@@ -107,8 +126,41 @@
 			children = (
 				3DD93D401DDBA6FB0091569A /* SalesTaxesTests.m */,
 				3DD93D421DDBA6FB0091569A /* Info.plist */,
+				3DD93D5E1DDBCE8C0091569A /* TaxCalculatorTests.m */,
 			);
 			path = SalesTaxesTests;
+			sourceTree = "<group>";
+		};
+		3DD93D4B1DDBB8310091569A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				3DD93D4C1DDBB8630091569A /* Product.h */,
+				3DD93D4D1DDBB8630091569A /* Product.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		3DD93D4F1DDBBAA70091569A /* support */ = {
+			isa = PBXGroup;
+			children = (
+				3DD93D501DDBBABD0091569A /* TaxCalculator */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		3DD93D501DDBBABD0091569A /* TaxCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				3DD93D511DDBBAF10091569A /* ApplicableTaxRule.h */,
+				3DD93D521DDBBAF10091569A /* ApplicableTaxRule.m */,
+				3DD93D581DDBC5E40091569A /* TaxCalculatorItem.h */,
+				3DD93D591DDBC5E40091569A /* TaxCalculatorItem.m */,
+				3DD93D5B1DDBC7ED0091569A /* TaxCalculatorResult.h */,
+				3DD93D5C1DDBC7ED0091569A /* TaxCalculatorResult.m */,
+				3DD93D551DDBC4DB0091569A /* TaxCalculator.h */,
+				3DD93D561DDBC4DB0091569A /* TaxCalculator.m */,
+			);
+			name = TaxCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DD93D2E1DDBA6FB0091569A /* ViewController.m in Sources */,
+				3DD93D571DDBC4DB0091569A /* TaxCalculator.m in Sources */,
+				3DD93D4E1DDBB8630091569A /* Product.m in Sources */,
+				3DD93D531DDBBAF10091569A /* ApplicableTaxRule.m in Sources */,
 				3DD93D2B1DDBA6FB0091569A /* AppDelegate.m in Sources */,
+				3DD93D5A1DDBC5E40091569A /* TaxCalculatorItem.m in Sources */,
+				3DD93D5D1DDBC7ED0091569A /* TaxCalculatorResult.m in Sources */,
 				3DD93D281DDBA6FB0091569A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DD93D411DDBA6FB0091569A /* SalesTaxesTests.m in Sources */,
+				3DD93D5F1DDBCE8C0091569A /* TaxCalculatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
