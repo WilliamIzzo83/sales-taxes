@@ -1,5 +1,5 @@
 //
-//  TaxCalculatorTests.m
+//  ApplicableTaxTest.m
 //  SalesTaxes
 //
 //  Created by William Izzo on 16/11/2016.
@@ -8,12 +8,13 @@
 
 #import <XCTest/XCTest.h>
 #import "TaxCalculator.h"
-@interface TaxCalculatorTests : XCTestCase
+@interface ApplicableTaxTest : XCTestCase
 @property (strong, nonatomic) NSArray<TaxCalculatorItem*>* mockItemsInput1;
+@property (strong, nonatomic) NSArray<NSDecimalNumber*>* mockItemsInput1TaxAmountResults;
 @property (strong, nonatomic) NSArray<NSDecimalNumber*>* mockItemsInput1Results;
 @end
 
-@implementation TaxCalculatorTests
+@implementation ApplicableTaxTest
 
 - (void)setUp {
     [super setUp];
@@ -27,11 +28,11 @@
                                  andProperties:@[@"food"]]
       ];
     
-    self.mockItemsInput1Results = (NSArray<NSDecimalNumber*>*)
+    self.mockItemsInput1TaxAmountResults = (NSArray<NSDecimalNumber*>*)
     @[
-      [[NSDecimalNumber alloc] initWithDouble:12.49],
-      [[NSDecimalNumber alloc] initWithDouble:16.49],
-      [[NSDecimalNumber alloc] initWithDouble:0.85]
+      [[NSDecimalNumber alloc] initWithDouble:0.00],
+      [[NSDecimalNumber alloc] initWithDouble:1.5],
+      [[NSDecimalNumber alloc] initWithDouble:0.00]
       ];
 }
 
@@ -53,10 +54,10 @@
     XCTAssert([applicableTax isEqualToNumber:@(20.0)], @"Applicable tax rule test failed");
 }
 
-- (void)testApplicableTax {
+- (void)testBaseApplicableTax {
     ApplicableTaxRule* defaultRule = [[ApplicableTaxRule alloc]
                                     initWithIdentifier:@"default"
-                                    andPercentage:[[NSDecimalNumber alloc] initWithDouble:10.0]];
+                                    andPercentage:[[NSDecimalNumber alloc] initWithDouble:0.1]];
 
     ApplicableTaxRule* booksRule = [[ApplicableTaxRule alloc]
                                     initWithIdentifier:@"books"
@@ -68,8 +69,23 @@
     TaxCalculatorRules* rules = @[defaultRule, booksRule, foodRule];
     
     ApplicableTax* tax = [[ApplicableTax alloc]
-                          initWithIdentifier:@"basic"
+                          initWithIdentifier:@"base"
                           andTaxRules:rules];
+    
+    for (NSUInteger itemIdx = 0; itemIdx < self.mockItemsInput1.count; ++itemIdx) {
+        TaxCalculatorItem* item = self.mockItemsInput1[itemIdx];
+        NSDecimalNumber* expectedTaxAmount = self.mockItemsInput1TaxAmountResults[itemIdx];
+        
+        NSDecimalNumber* taxAmount = [tax applicableTaxAmountForItem:item];
+        
+        BOOL expectationMet = [taxAmount isEqual:expectedTaxAmount];
+        XCTAssert(expectationMet, @"!!! Tax amount computation failed\n\nItem:\nprice: %@\nproperties: %@\n\nExpected tax amount: %@\nComputed tax amount: %@",
+                  item.price,
+                  item.properties,
+                  expectedTaxAmount,
+                  taxAmount);
+        
+    }
     
     
     

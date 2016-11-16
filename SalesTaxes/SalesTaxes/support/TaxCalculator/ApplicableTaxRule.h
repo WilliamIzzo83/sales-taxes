@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Initializes a TaxCalculatorRule object.
+ * @note Throws an exception if percentage range is invalid.
  * @param identifier Rule identifier.
  * @param percentage to apply to price. Percentage is expresed in range 0..1
  * @return TaxCalculatorRule object.

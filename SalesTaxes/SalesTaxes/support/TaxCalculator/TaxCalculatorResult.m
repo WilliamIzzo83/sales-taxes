@@ -9,5 +9,13 @@
 #import "TaxCalculatorResult.h"
 
 @implementation TaxCalculatorResult
-
+- (instancetype)initWithOriginalPrice:(NSDecimalNumber *)originalPrice
+                           taxedPrice:(NSDecimalNumber *)taxedPrice
+                          taxesAmount:(NSDecimalNumber *)taxesAmount {
+    self = [super init];
+    self->_originalPrice = [originalPrice copy];
+    self->_taxedPrice = [taxedPrice copy];
+    self->_taxesAmount = [taxesAmount copy];
+    return self;
+}
 @end

@@ -13,6 +13,7 @@
 - (instancetype)initWithIdentifier:(NSString*)identifier
                      andPercentage:(NSDecimalNumber*)percentage {
     self = [super init];
+    // TODO(William): Throw an exception if percentage is out of range
     self->_identifier = [identifier copy];
     self->_percentage = [percentage copy];
     return self;
