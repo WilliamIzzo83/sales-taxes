@@ -1,5 +1,6 @@
 language: objective-c
-xcode_project: SalesTaxes/SalesTaxes.xcodeproj
-xcode_scheme: SalesTaxes
-xcode_sdk: iphonesimulator10.1
 osx_image: xcode8.1
+#xcode_project: SalesTaxes/SalesTaxes.xcodeproj
+#xcode_scheme: SalesTaxes
+#xcode_sdk: iphonesimulator10.1
+script: xcodebuild -project SalesTaxes/SalesTaxes.xcodeproj -scheme SalesTaxes -sdk iphonesimulator10.1 -destination 'platform=iOS Simulator,name=iPhone SE,OS=10.1' test
