@@ -16,10 +16,12 @@ NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
 @implementation TaxCalculatorTestData
 
 - (instancetype)initWithItems:(NSArray<TaxCalculatorItem*>*)items
-           andExpectedResults:(NSArray<TaxCalculatorResult*>*)results {
+              expectedResults:(NSArray<TaxCalculatorResult*>*)results
+                     andTotal:(TaxCalculatorResult*)totalResult {
     self = [super init];
     self->_items = [NSArray<TaxCalculatorItem*> arrayWithArray:items];
     self->_result = [NSArray<TaxCalculatorResult*> arrayWithArray:results];
+    self->_totalResult = totalResult;
     return self;
 }
 
@@ -99,9 +101,15 @@ NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
       
       ];
     
+    TaxCalculatorResult* total =
+    [[TaxCalculatorResult alloc] initWithOriginalPrice:dec(2833, -2, NO)
+                                            taxedPrice:dec(2983, -2, NO)
+                                           taxesAmount:dec(150, -2, NO)];
+    
     
     return [[TaxCalculatorTestData alloc] initWithItems:items
-                                     andExpectedResults:results];
+                                     expectedResults:results
+                                               andTotal:total];
 }
 
 + (TaxCalculatorTestData*)secondInputData {
@@ -127,8 +135,14 @@ NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
       ];
     
     
+    TaxCalculatorResult* total =
+    [[TaxCalculatorResult alloc] initWithOriginalPrice:dec(5750, -2, NO)
+                                            taxedPrice:dec(6515, -2, NO)
+                                           taxesAmount:dec(765, -2, NO)];
+    
     return [[TaxCalculatorTestData alloc] initWithItems:items
-                                     andExpectedResults:results];
+                                        expectedResults:results
+                                               andTotal:total];
 }
 
 + (TaxCalculatorTestData*)thirdInputData {
@@ -165,8 +179,14 @@ NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
       
       ];
     
+    TaxCalculatorResult* total =
+    [[TaxCalculatorResult alloc] initWithOriginalPrice:dec(6798, -2, NO)
+                                            taxedPrice:dec(7468, -2, NO)
+                                           taxesAmount:dec(670, -2, NO)];
+    
     return [[TaxCalculatorTestData alloc] initWithItems:items
-                                     andExpectedResults:results];
+                                        expectedResults:results
+                                               andTotal:total];
 }
 
 @end

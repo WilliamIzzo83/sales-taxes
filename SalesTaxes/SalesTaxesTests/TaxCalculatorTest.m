@@ -11,7 +11,6 @@
 #import "TestsUtils.h"
 
 @interface TaxCalculatorTest : XCTestCase
-
 @end
 
 @implementation TaxCalculatorTest

@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "TaxCalculatorItem.h"
 
-
+// TODO: it is quite a waste to use an array of the same product.
+// A simple class holding the item and a count will do.
+/// A type defining an array of the same product.
 typedef NSMutableArray<TaxCalculatorItem*> ProductBucket;
 
 /**
