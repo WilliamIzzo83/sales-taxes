@@ -20,6 +20,9 @@
 		3DD93D5D1DDBC7ED0091569A /* TaxCalculatorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D5C1DDBC7ED0091569A /* TaxCalculatorResult.m */; };
 		3DD93D5F1DDBCE8C0091569A /* ApplicableTaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D5E1DDBCE8C0091569A /* ApplicableTaxTest.m */; };
 		3DD93D621DDC366F0091569A /* ApplicableTax.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D611DDC366F0091569A /* ApplicableTax.m */; };
+		3DD93D641DDCF1CA0091569A /* TaxCalculatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D631DDCF1CA0091569A /* TaxCalculatorTest.m */; };
+		3DD93D671DDD7D590091569A /* TaxCalculatorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D661DDD7D590091569A /* TaxCalculatorUtils.m */; };
+		3DD93D6A1DDD82300091569A /* TestsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D691DDD82300091569A /* TestsUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,11 @@
 		3DD93D5E1DDBCE8C0091569A /* ApplicableTaxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicableTaxTest.m; sourceTree = "<group>"; };
 		3DD93D601DDC366F0091569A /* ApplicableTax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicableTax.h; path = support/TaxCalculator/ApplicableTax.h; sourceTree = "<group>"; };
 		3DD93D611DDC366F0091569A /* ApplicableTax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicableTax.m; path = support/TaxCalculator/ApplicableTax.m; sourceTree = "<group>"; };
+		3DD93D631DDCF1CA0091569A /* TaxCalculatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxCalculatorTest.m; sourceTree = "<group>"; };
+		3DD93D651DDD7D590091569A /* TaxCalculatorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxCalculatorUtils.h; path = support/TaxCalculatorUtils.h; sourceTree = "<group>"; };
+		3DD93D661DDD7D590091569A /* TaxCalculatorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxCalculatorUtils.m; path = support/TaxCalculatorUtils.m; sourceTree = "<group>"; };
+		3DD93D681DDD82300091569A /* TestsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsUtils.h; sourceTree = "<group>"; };
+		3DD93D691DDD82300091569A /* TestsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestsUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,9 @@
 			children = (
 				3DD93D421DDBA6FB0091569A /* Info.plist */,
 				3DD93D5E1DDBCE8C0091569A /* ApplicableTaxTest.m */,
+				3DD93D631DDCF1CA0091569A /* TaxCalculatorTest.m */,
+				3DD93D681DDD82300091569A /* TestsUtils.h */,
+				3DD93D691DDD82300091569A /* TestsUtils.m */,
 			);
 			path = SalesTaxesTests;
 			sourceTree = "<group>";
@@ -161,6 +172,8 @@
 				3DD93D5C1DDBC7ED0091569A /* TaxCalculatorResult.m */,
 				3DD93D551DDBC4DB0091569A /* TaxCalculator.h */,
 				3DD93D561DDBC4DB0091569A /* TaxCalculator.m */,
+				3DD93D651DDD7D590091569A /* TaxCalculatorUtils.h */,
+				3DD93D661DDD7D590091569A /* TaxCalculatorUtils.m */,
 			);
 			name = TaxCalculator;
 			sourceTree = "<group>";
@@ -277,6 +290,7 @@
 				3DD93D5A1DDBC5E40091569A /* TaxCalculatorItem.m in Sources */,
 				3DD93D5D1DDBC7ED0091569A /* TaxCalculatorResult.m in Sources */,
 				3DD93D281DDBA6FB0091569A /* main.m in Sources */,
+				3DD93D671DDD7D590091569A /* TaxCalculatorUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DD93D5F1DDBCE8C0091569A /* ApplicableTaxTest.m in Sources */,
+				3DD93D6A1DDD82300091569A /* TestsUtils.m in Sources */,
+				3DD93D641DDCF1CA0091569A /* TaxCalculatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

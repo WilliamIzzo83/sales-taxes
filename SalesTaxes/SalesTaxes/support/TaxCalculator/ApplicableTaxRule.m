@@ -7,6 +7,7 @@
 //
 
 #import "ApplicableTaxRule.h"
+#import "TaxCalculatorUtils.h"
 
 NSExceptionName const kApplicableTaxRuleExcPercentageInterval =
 @"com.wizzo.salestaxes.exc.applicabletaxrule.percentageinterval";
@@ -42,16 +43,11 @@ NSExceptionName const kApplicableTaxRuleExcPercentageInterval =
 
 - (NSDecimalNumber*)applicableTaxToPrice:(NSDecimalNumber *)price {
     
-    NSDecimalNumberHandler *handler =
-    [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain
-                                                           scale:2
-                                                raiseOnExactness:NO
-                                                 raiseOnOverflow:NO
-                                                raiseOnUnderflow:NO
-                                             raiseOnDivideByZero:NO];
+    NSDecimalNumber* nearest = [[NSDecimalNumber alloc] initWithMantissa:5 exponent:-2 isNegative:NO];
+    NSDecimalNumber* taxAmount = [price decimalNumberByMultiplyingBy:self.percentage];
+    return [TaxCalculatorUtils roundUpDecimal:taxAmount toNearest:nearest];
     
-    return [price decimalNumberByMultiplyingBy:self.percentage
-                                  withBehavior:handler];
+ 
 }
 
 @end

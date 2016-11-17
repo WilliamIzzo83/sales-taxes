@@ -7,8 +7,12 @@
 //
 
 #import "TaxCalculator.h"
+#import "TaxCalculatorUtils.h"
+
 
 @interface TaxCalculator()
+
+
 @property (strong, nonatomic) TaxCalculatorApplicableTaxes* applicableTaxes;
 @end
 
@@ -27,6 +31,7 @@
 }
 
 
+
 - (TaxCalculatorResult*)computeTaxesOnItem:(TaxCalculatorItem *)item {
     
     
@@ -39,11 +44,16 @@
          totalTaxesAmount = [taxAmount decimalNumberByAdding:totalTaxesAmount];
     }];
     
+    NSDecimalNumber* nearest =
+    [[NSDecimalNumber alloc] initWithMantissa:5 exponent:-2 isNegative:NO];
+    
+    NSDecimalNumber* roundedUpTaxes = [TaxCalculatorUtils roundUpDecimal:totalTaxesAmount toNearest:nearest];
+    
     NSDecimalNumber *taxedPrice = [item.price
-                                   decimalNumberByAdding:totalTaxesAmount];
+                                   decimalNumberByAdding:roundedUpTaxes];
     
     return [[TaxCalculatorResult alloc] initWithOriginalPrice:item.price
                                                    taxedPrice:taxedPrice
-                                                  taxesAmount:totalTaxesAmount];
+                                                  taxesAmount:roundedUpTaxes];
 }
 @end

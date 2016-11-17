@@ -19,12 +19,17 @@
     return self;
 }
 
+- (NSString*)description {
+    return [NSString stringWithFormat:@"{ original price: %@, taxed price: %@, taxes amount: %@",
+            self.originalPrice, self.taxedPrice, self.taxesAmount];
+}
+
 - (BOOL)isEqual:(id)object {
     if (![object isKindOfClass:[TaxCalculatorResult class]]) {
         return NO;
     }
     
-    TaxCalculatorResult* other = (TaxCalculatorResult*)other;
+    TaxCalculatorResult* other = (TaxCalculatorResult*)object;
     
     return [self.originalPrice isEqual:other.originalPrice] &&
     [self.taxedPrice isEqual:other.taxedPrice] &&

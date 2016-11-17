@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "TaxCalculator.h"
+#import "TestsUtils.h"
+
 @interface ApplicableTaxTest : XCTestCase
 @property (strong, nonatomic) NSArray<TaxCalculatorItem*>* mockItemsInput1;
 @property (strong, nonatomic) NSArray<NSDecimalNumber*>* mockItemsInput1TaxAmountResults;
@@ -20,19 +22,19 @@
     [super setUp];
     self.mockItemsInput1 = (NSArray<TaxCalculatorItem*>*)
     @[
-      [[TaxCalculatorItem alloc] initWithPrice:[[NSDecimalNumber alloc] initWithDouble:12.49]
+      [[TaxCalculatorItem alloc] initWithPrice:dec(1249, -2, NO)
                                  andProperties:@[@"books"]],
-      [[TaxCalculatorItem alloc] initWithPrice:[[NSDecimalNumber alloc] initWithDouble:14.99]
+      [[TaxCalculatorItem alloc] initWithPrice:dec(1499, -2, NO)
                                  andProperties:@[@"music"]],
-      [[TaxCalculatorItem alloc] initWithPrice:[[NSDecimalNumber alloc] initWithInt:0.85]
+      [[TaxCalculatorItem alloc] initWithPrice:dec(85, -2, NO)
                                  andProperties:@[@"food"]]
       ];
     
     self.mockItemsInput1TaxAmountResults = (NSArray<NSDecimalNumber*>*)
     @[
-      [[NSDecimalNumber alloc] initWithDouble:0.00],
-      [[NSDecimalNumber alloc] initWithDouble:1.5],
-      [[NSDecimalNumber alloc] initWithDouble:0.00]
+      dec(0, 0, NO),
+      dec(15, -1, NO),
+      dec(0, 0, NO)
       ];
 }
 
@@ -45,19 +47,19 @@
 
     ApplicableTaxRule* taxRule = [[ApplicableTaxRule alloc]
                                   initWithIdentifier:@""
-                                  andPercentage:[[NSDecimalNumber alloc] initWithFloat:0.2]];
+                                  andPercentage:dec(2, -1, NO)];
     
     NSDecimalNumber* applicableTax =
-    [taxRule applicableTaxToPrice:[[NSDecimalNumber alloc] initWithFloat:100.0]];
+    [taxRule applicableTaxToPrice:dec(1, 2, NO)];
     
     
-    XCTAssert([applicableTax isEqualToNumber:@(20.0)], @"Applicable tax rule test failed");
+    XCTAssert([applicableTax isEqualToNumber:dec(2, 1, NO)], @"Applicable tax rule test failed");
 }
 
 - (void)testBaseApplicableTax {
     ApplicableTaxRule* defaultRule = [[ApplicableTaxRule alloc]
                                     initWithIdentifier:@"default"
-                                    andPercentage:[[NSDecimalNumber alloc] initWithDouble:0.1]];
+                                    andPercentage:dec(1, -1, NO)];
 
     ApplicableTaxRule* booksRule = [[ApplicableTaxRule alloc]
                                     initWithIdentifier:@"books"
@@ -86,8 +88,5 @@
                   taxAmount);
         
     }
-    
-    
-    
 }
 @end
