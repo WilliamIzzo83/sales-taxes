@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+NS_ASSUME_NONNULL_BEGIN
+
 /// Type defining an array of properties
 typedef NSArray<NSString*> TaxCalculatorItemProperties;
 /**
@@ -17,11 +19,16 @@ typedef NSArray<NSString*> TaxCalculatorItemProperties;
  */
 @interface TaxCalculatorItem : NSObject
 
-- (instancetype)initWithPrice:(NSDecimalNumber*)price
-                andProperties:(TaxCalculatorItemProperties*)properties;
+- (instancetype)initWithName:(NSString*)name
+                       price:(NSDecimalNumber*)price
+               andProperties:(TaxCalculatorItemProperties*)properties;
 
+/// Item's name
+@property (readonly, nonatomic) NSString* name;
 /// Item's price
 @property (readonly, nonatomic) NSDecimalNumber* price;
 /// Item's properties
 @property (readonly, nonatomic) TaxCalculatorItemProperties* properties;
 @end
+
+NS_ASSUME_NONNULL_END

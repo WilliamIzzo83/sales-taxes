@@ -9,9 +9,11 @@
 #import "TaxCalculatorItem.h"
 
 @implementation TaxCalculatorItem
-- (instancetype)initWithPrice:(NSDecimalNumber*)price
-                andProperties:(TaxCalculatorItemProperties*)properties {
+- (instancetype) initWithName:(NSString *)name
+                        price:(NSDecimalNumber *)price
+                andProperties:(TaxCalculatorItemProperties *)properties {
     self = [super init];
+    self->_name = [name copy];
     self->_price = [price copy];
     self->_properties = [NSArray arrayWithArray:properties];
     return self;

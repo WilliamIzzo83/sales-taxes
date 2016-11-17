@@ -74,12 +74,15 @@ NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
 + (TaxCalculatorTestData*)firstInputData {
     NSArray<TaxCalculatorItem*>* items = (NSArray<TaxCalculatorItem*>*)
     @[
-      [[TaxCalculatorItem alloc] initWithPrice:dec(1249, -2, NO)
-                                 andProperties:@[@"books"]],
-      [[TaxCalculatorItem alloc] initWithPrice:dec(1499, -2, NO)
-                                 andProperties:@[@"music"]],
-      [[TaxCalculatorItem alloc] initWithPrice:dec(85, -2, NO)
-                                 andProperties:@[@"food"]]
+      [[TaxCalculatorItem alloc] initWithName:@"book"
+                                        price:dec(1249, -2, NO)
+                                andProperties:@[@"books"]],
+      [[TaxCalculatorItem alloc] initWithName:@"music cd"
+                                        price:dec(1499, -2, NO)
+                                andProperties:@[@"music"]],
+      [[TaxCalculatorItem alloc] initWithName:@"chocolate"
+                                        price:dec(85, -2, NO)
+                                andProperties:@[@"food"]]
       ];
     
     
@@ -104,10 +107,12 @@ NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
 + (TaxCalculatorTestData*)secondInputData {
     NSArray<TaxCalculatorItem*>* items = (NSArray<TaxCalculatorItem*>*)
     @[
-      [[TaxCalculatorItem alloc] initWithPrice:dec(10, 0, NO)
-                                 andProperties:@[@"food", @"import"]],
-      [[TaxCalculatorItem alloc] initWithPrice:dec(4750, -2, NO)
-                                 andProperties:@[@"perfume", @"import"]]
+      [[TaxCalculatorItem alloc] initWithName:@"imported chocolate box"
+                                        price:dec(10, 0, NO)
+                                andProperties:@[@"food", @"import"]],
+      [[TaxCalculatorItem alloc] initWithName:@"imported perfume"
+                                        price:dec(4750, -2, NO)
+                                andProperties:@[@"perfume", @"import"]]
       ];
     
     
@@ -129,14 +134,18 @@ NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
 + (TaxCalculatorTestData*)thirdInputData {
     NSArray<TaxCalculatorItem*>* items = (NSArray<TaxCalculatorItem*>*)
     @[
-      [[TaxCalculatorItem alloc] initWithPrice:dec(2799, -2, NO)
-                                 andProperties:@[@"perfume", @"import"]],
-      [[TaxCalculatorItem alloc] initWithPrice:dec(1899, -2, NO)
-                                 andProperties:@[@"perfume"]],
-      [[TaxCalculatorItem alloc] initWithPrice:dec(975, -2, NO)
-                                 andProperties:@[@"medical"]],
-      [[TaxCalculatorItem alloc] initWithPrice:dec(1125, -2, NO)
-                                 andProperties:@[@"food", @"import"]]
+      [[TaxCalculatorItem alloc] initWithName:@"imported perfume"
+                                        price:dec(2799, -2, NO)
+                                andProperties:@[@"perfume", @"import"]],
+      [[TaxCalculatorItem alloc] initWithName:@"perfume"
+                                        price:dec(1899, -2, NO)
+                                andProperties:@[@"perfume"]],
+      [[TaxCalculatorItem alloc] initWithName:@"medicine"
+                                        price:dec(975, -2, NO)
+                                andProperties:@[@"medical"]],
+      [[TaxCalculatorItem alloc] initWithName:@"imported chocolate box"
+                                        price:dec(1125, -2, NO)
+                                andProperties:@[@"food", @"import"]]
       ];
     
     

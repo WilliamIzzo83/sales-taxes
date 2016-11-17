@@ -25,6 +25,7 @@
     [super tearDown];
 }
 
+/// Tests tax calculator results correctness
 - (void)testTaxCalculator {
     TaxCalculator* taxCalc = [TestsUtils calculator];
     NSArray<TaxCalculatorTestData*>* dataSet =
