@@ -26,6 +26,7 @@
     [super tearDown];
 }
 
+/// Tests that insering one object for each type works
 - (void)testSingleInsert {
     NSArray<TaxCalculatorItem*>* items = [TestsUtils firstInputData].items;
     ProductBasket* basket = [[ProductBasket alloc] init];
@@ -37,7 +38,7 @@
     NSUInteger count = basket.productCount;
     NSUInteger expectedCount = items.count;
     
-    XCTAssert(basket.productCount == items.count,
+    XCTAssert(count == expectedCount,
               @"!!! Basket count(%@) doesn't match expectation(%@)",
               @(count), @(expectedCount));
     
@@ -49,5 +50,24 @@
                   item.name);
     }
 }
+
+/// Tests that inserting products with arbitrary quantity for each kind, works
+- (void)testMultipleInsert {
+    NSArray<TaxCalculatorItem*>* items = [TestsUtils firstInputData].items;
+    ProductBasket* basket = [[ProductBasket alloc] init];
+    
+    for (TaxCalculatorItem* item in items) {
+        [basket addItem:item withQuantity:2];
+    }
+    
+    NSUInteger count = basket.productCount;
+    NSUInteger expectedCount = items.count * 2;
+    
+    XCTAssert(count == expectedCount,
+              @"!!! Basket count(%@) doesn't match expectation(%@)",
+              @(count), @(expectedCount));
+}
+
+
 
 @end
