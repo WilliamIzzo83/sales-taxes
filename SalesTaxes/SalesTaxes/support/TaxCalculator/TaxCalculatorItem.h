@@ -17,7 +17,7 @@ typedef NSArray<NSString*> TaxCalculatorItemProperties;
  * properties are used by TaxCalculator to determine which rule to use to
  * determine the amount of applicable taxes.
  */
-@interface TaxCalculatorItem : NSObject
+@interface TaxCalculatorItem : NSObject<NSCopying>
 
 - (instancetype)initWithName:(NSString*)name
                        price:(NSDecimalNumber*)price
