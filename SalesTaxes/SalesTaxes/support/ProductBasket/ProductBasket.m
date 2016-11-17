@@ -79,7 +79,7 @@
 - (NSArray<ProductBucket*>*)buckets {
     
     NSArray<ProductBucket*>* products =
-    [[NSArray alloc] initWithArray:self.basket.allKeys copyItems:YES];
+    [[NSArray alloc] initWithArray:self.basket.allValues copyItems:YES];
     
     return products;
 }

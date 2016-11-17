@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D73B87B1DDDB03300F8E62A /* ReceiptGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73B87A1DDDB03300F8E62A /* ReceiptGenerator.m */; };
+		3D73B87E1DDDB0D300F8E62A /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73B87D1DDDB0D300F8E62A /* Receipt.m */; };
+		3D73B8811DDDB1B900F8E62A /* ReceiptItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73B8801DDDB1B900F8E62A /* ReceiptItem.m */; };
+		3D73B8861DDDBAC100F8E62A /* ReceiptItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73B8851DDDBAC100F8E62A /* ReceiptItemTest.m */; };
+		3D73B8881DDDBF6C00F8E62A /* ReceiptTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73B8871DDDBF6C00F8E62A /* ReceiptTest.m */; };
+		3D73B88A1DDDC3CD00F8E62A /* ReceiptGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73B8891DDDC3CD00F8E62A /* ReceiptGeneratorTest.m */; };
 		3D8B82AB1DDD8D4A0046D237 /* ProductBasket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B82AA1DDD8D4A0046D237 /* ProductBasket.m */; };
 		3D8B82AD1DDD95370046D237 /* ProductBasketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */; };
 		3DD93D281DDBA6FB0091569A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D271DDBA6FB0091569A /* main.m */; };
@@ -37,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D73B8791DDDB03300F8E62A /* ReceiptGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceiptGenerator.h; path = support/ReceiptGenerator/ReceiptGenerator.h; sourceTree = "<group>"; };
+		3D73B87A1DDDB03300F8E62A /* ReceiptGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceiptGenerator.m; path = support/ReceiptGenerator/ReceiptGenerator.m; sourceTree = "<group>"; };
+		3D73B87C1DDDB0D200F8E62A /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Receipt.h; path = support/ReceiptGenerator/Receipt.h; sourceTree = "<group>"; };
+		3D73B87D1DDDB0D300F8E62A /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Receipt.m; path = support/ReceiptGenerator/Receipt.m; sourceTree = "<group>"; };
+		3D73B87F1DDDB1B900F8E62A /* ReceiptItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceiptItem.h; path = support/ReceiptGenerator/ReceiptItem.h; sourceTree = "<group>"; };
+		3D73B8801DDDB1B900F8E62A /* ReceiptItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceiptItem.m; path = support/ReceiptGenerator/ReceiptItem.m; sourceTree = "<group>"; };
+		3D73B8851DDDBAC100F8E62A /* ReceiptItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptItemTest.m; sourceTree = "<group>"; };
+		3D73B8871DDDBF6C00F8E62A /* ReceiptTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptTest.m; sourceTree = "<group>"; };
+		3D73B8891DDDC3CD00F8E62A /* ReceiptGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptGeneratorTest.m; sourceTree = "<group>"; };
 		3D8B82A91DDD8D4A0046D237 /* ProductBasket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductBasket.h; path = support/ProductBasket/ProductBasket.h; sourceTree = "<group>"; };
 		3D8B82AA1DDD8D4A0046D237 /* ProductBasket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductBasket.m; path = support/ProductBasket/ProductBasket.m; sourceTree = "<group>"; };
 		3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductBasketTest.m; sourceTree = "<group>"; };
@@ -88,6 +103,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D73B8781DDDB00A00F8E62A /* ReceiptGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				3D73B8791DDDB03300F8E62A /* ReceiptGenerator.h */,
+				3D73B87A1DDDB03300F8E62A /* ReceiptGenerator.m */,
+				3D73B87C1DDDB0D200F8E62A /* Receipt.h */,
+				3D73B87D1DDDB0D300F8E62A /* Receipt.m */,
+				3D73B87F1DDDB1B900F8E62A /* ReceiptItem.h */,
+				3D73B8801DDDB1B900F8E62A /* ReceiptItem.m */,
+			);
+			name = ReceiptGenerator;
+			sourceTree = "<group>";
+		};
 		3D8B82A81DDD8C740046D237 /* ProductBasket */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +177,9 @@
 				3DD93D681DDD82300091569A /* TestsUtils.h */,
 				3DD93D691DDD82300091569A /* TestsUtils.m */,
 				3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */,
+				3D73B8851DDDBAC100F8E62A /* ReceiptItemTest.m */,
+				3D73B8871DDDBF6C00F8E62A /* ReceiptTest.m */,
+				3D73B8891DDDC3CD00F8E62A /* ReceiptGeneratorTest.m */,
 			);
 			path = SalesTaxesTests;
 			sourceTree = "<group>";
@@ -156,6 +187,7 @@
 		3DD93D4F1DDBBAA70091569A /* support */ = {
 			isa = PBXGroup;
 			children = (
+				3D73B8781DDDB00A00F8E62A /* ReceiptGenerator */,
 				3D8B82A81DDD8C740046D237 /* ProductBasket */,
 				3DD93D501DDBBABD0091569A /* TaxCalculator */,
 			);
@@ -286,11 +318,14 @@
 			files = (
 				3DD93D2E1DDBA6FB0091569A /* ViewController.m in Sources */,
 				3DD93D571DDBC4DB0091569A /* TaxCalculator.m in Sources */,
+				3D73B87B1DDDB03300F8E62A /* ReceiptGenerator.m in Sources */,
 				3DD93D531DDBBAF10091569A /* ApplicableTaxRule.m in Sources */,
 				3DD93D621DDC366F0091569A /* ApplicableTax.m in Sources */,
 				3DD93D2B1DDBA6FB0091569A /* AppDelegate.m in Sources */,
 				3DD93D5A1DDBC5E40091569A /* TaxCalculatorItem.m in Sources */,
 				3DD93D5D1DDBC7ED0091569A /* TaxCalculatorResult.m in Sources */,
+				3D73B87E1DDDB0D300F8E62A /* Receipt.m in Sources */,
+				3D73B8811DDDB1B900F8E62A /* ReceiptItem.m in Sources */,
 				3D8B82AB1DDD8D4A0046D237 /* ProductBasket.m in Sources */,
 				3DD93D281DDBA6FB0091569A /* main.m in Sources */,
 				3DD93D671DDD7D590091569A /* TaxCalculatorUtils.m in Sources */,
@@ -301,9 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D73B8881DDDBF6C00F8E62A /* ReceiptTest.m in Sources */,
+				3D73B8861DDDBAC100F8E62A /* ReceiptItemTest.m in Sources */,
 				3DD93D5F1DDBCE8C0091569A /* ApplicableTaxTest.m in Sources */,
 				3D8B82AD1DDD95370046D237 /* ProductBasketTest.m in Sources */,
 				3DD93D6A1DDD82300091569A /* TestsUtils.m in Sources */,
+				3D73B88A1DDDC3CD00F8E62A /* ReceiptGeneratorTest.m in Sources */,
 				3DD93D641DDCF1CA0091569A /* TaxCalculatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
