@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D8B82AB1DDD8D4A0046D237 /* ProductBasket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B82AA1DDD8D4A0046D237 /* ProductBasket.m */; };
+		3D8B82AD1DDD95370046D237 /* ProductBasketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */; };
 		3DD93D281DDBA6FB0091569A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D271DDBA6FB0091569A /* main.m */; };
 		3DD93D2B1DDBA6FB0091569A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D2A1DDBA6FB0091569A /* AppDelegate.m */; };
 		3DD93D2E1DDBA6FB0091569A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D2D1DDBA6FB0091569A /* ViewController.m */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D8B82A91DDD8D4A0046D237 /* ProductBasket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductBasket.h; path = support/ProductBasket/ProductBasket.h; sourceTree = "<group>"; };
+		3D8B82AA1DDD8D4A0046D237 /* ProductBasket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductBasket.m; path = support/ProductBasket/ProductBasket.m; sourceTree = "<group>"; };
+		3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductBasketTest.m; sourceTree = "<group>"; };
 		3DD93D231DDBA6FB0091569A /* SalesTaxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalesTaxes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD93D271DDBA6FB0091569A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3DD93D291DDBA6FB0091569A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D8B82A81DDD8C740046D237 /* ProductBasket */ = {
+			isa = PBXGroup;
+			children = (
+				3D8B82A91DDD8D4A0046D237 /* ProductBasket.h */,
+				3D8B82AA1DDD8D4A0046D237 /* ProductBasket.m */,
+			);
+			name = ProductBasket;
+			sourceTree = "<group>";
+		};
 		3DD93D1A1DDBA6FB0091569A = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +148,7 @@
 				3DD93D631DDCF1CA0091569A /* TaxCalculatorTest.m */,
 				3DD93D681DDD82300091569A /* TestsUtils.h */,
 				3DD93D691DDD82300091569A /* TestsUtils.m */,
+				3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */,
 			);
 			path = SalesTaxesTests;
 			sourceTree = "<group>";
@@ -141,6 +156,7 @@
 		3DD93D4F1DDBBAA70091569A /* support */ = {
 			isa = PBXGroup;
 			children = (
+				3D8B82A81DDD8C740046D237 /* ProductBasket */,
 				3DD93D501DDBBABD0091569A /* TaxCalculator */,
 			);
 			name = support;
@@ -275,6 +291,7 @@
 				3DD93D2B1DDBA6FB0091569A /* AppDelegate.m in Sources */,
 				3DD93D5A1DDBC5E40091569A /* TaxCalculatorItem.m in Sources */,
 				3DD93D5D1DDBC7ED0091569A /* TaxCalculatorResult.m in Sources */,
+				3D8B82AB1DDD8D4A0046D237 /* ProductBasket.m in Sources */,
 				3DD93D281DDBA6FB0091569A /* main.m in Sources */,
 				3DD93D671DDD7D590091569A /* TaxCalculatorUtils.m in Sources */,
 			);
@@ -285,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DD93D5F1DDBCE8C0091569A /* ApplicableTaxTest.m in Sources */,
+				3D8B82AD1DDD95370046D237 /* ProductBasketTest.m in Sources */,
 				3DD93D6A1DDD82300091569A /* TestsUtils.m in Sources */,
 				3DD93D641DDCF1CA0091569A /* TaxCalculatorTest.m in Sources */,
 			);
