@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TaxCalculator.h"
-
+#import "DecimalSupport.h"
 /**
  * Object that holds a test data set with relative verification data
  * to be used while testing TaxCalculator and ReceiptGenerator
@@ -37,5 +37,4 @@
 + (TaxCalculatorTestData*)thirdInputData;
 @end
 
-FOUNDATION_EXTERN
-NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg);
+

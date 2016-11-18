@@ -7,11 +7,7 @@
 //
 
 #import "TestsUtils.h"
-NSDecimalNumber* dec(NSUInteger mantissa, short exp, BOOL neg) {
-    return [[NSDecimalNumber alloc] initWithMantissa:mantissa
-                                            exponent:exp
-                                          isNegative:neg];
-}
+
 
 @implementation TaxCalculatorTestData
 
