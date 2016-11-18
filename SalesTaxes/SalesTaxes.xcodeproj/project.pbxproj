@@ -15,9 +15,11 @@
 		3D73B88A1DDDC3CD00F8E62A /* ReceiptGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73B8891DDDC3CD00F8E62A /* ReceiptGeneratorTest.m */; };
 		3D8B82AB1DDD8D4A0046D237 /* ProductBasket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B82AA1DDD8D4A0046D237 /* ProductBasket.m */; };
 		3D8B82AD1DDD95370046D237 /* ProductBasketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */; };
+		3DA627571DDEDFD300331C00 /* BasketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA627561DDEDFD300331C00 /* BasketDetailViewController.m */; };
+		3DA6275A1DDEE2EE00331C00 /* DecimalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA627591DDEE2EE00331C00 /* DecimalSupport.m */; };
 		3DD93D281DDBA6FB0091569A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D271DDBA6FB0091569A /* main.m */; };
 		3DD93D2B1DDBA6FB0091569A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D2A1DDBA6FB0091569A /* AppDelegate.m */; };
-		3DD93D2E1DDBA6FB0091569A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D2D1DDBA6FB0091569A /* ViewController.m */; };
+		3DD93D2E1DDBA6FB0091569A /* BasketSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD93D2D1DDBA6FB0091569A /* BasketSelectorViewController.m */; };
 		3DD93D311DDBA6FB0091569A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD93D2F1DDBA6FB0091569A /* Main.storyboard */; };
 		3DD93D331DDBA6FB0091569A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD93D321DDBA6FB0091569A /* Assets.xcassets */; };
 		3DD93D361DDBA6FB0091569A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD93D341DDBA6FB0091569A /* LaunchScreen.storyboard */; };
@@ -55,12 +57,16 @@
 		3D8B82A91DDD8D4A0046D237 /* ProductBasket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductBasket.h; path = support/ProductBasket/ProductBasket.h; sourceTree = "<group>"; };
 		3D8B82AA1DDD8D4A0046D237 /* ProductBasket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductBasket.m; path = support/ProductBasket/ProductBasket.m; sourceTree = "<group>"; };
 		3D8B82AC1DDD95370046D237 /* ProductBasketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductBasketTest.m; sourceTree = "<group>"; };
+		3DA627551DDEDFD300331C00 /* BasketDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasketDetailViewController.h; sourceTree = "<group>"; };
+		3DA627561DDEDFD300331C00 /* BasketDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasketDetailViewController.m; sourceTree = "<group>"; };
+		3DA627581DDEE2EE00331C00 /* DecimalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalSupport.h; sourceTree = "<group>"; };
+		3DA627591DDEE2EE00331C00 /* DecimalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalSupport.m; sourceTree = "<group>"; };
 		3DD93D231DDBA6FB0091569A /* SalesTaxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalesTaxes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD93D271DDBA6FB0091569A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3DD93D291DDBA6FB0091569A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DD93D2A1DDBA6FB0091569A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3DD93D2C1DDBA6FB0091569A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3DD93D2D1DDBA6FB0091569A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3DD93D2C1DDBA6FB0091569A /* BasketSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasketSelectorViewController.h; sourceTree = "<group>"; };
+		3DD93D2D1DDBA6FB0091569A /* BasketSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasketSelectorViewController.m; sourceTree = "<group>"; };
 		3DD93D301DDBA6FB0091569A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DD93D321DDBA6FB0091569A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DD93D351DDBA6FB0091569A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -149,13 +155,17 @@
 				3DD93D4F1DDBBAA70091569A /* support */,
 				3DD93D291DDBA6FB0091569A /* AppDelegate.h */,
 				3DD93D2A1DDBA6FB0091569A /* AppDelegate.m */,
-				3DD93D2C1DDBA6FB0091569A /* ViewController.h */,
-				3DD93D2D1DDBA6FB0091569A /* ViewController.m */,
+				3DD93D2C1DDBA6FB0091569A /* BasketSelectorViewController.h */,
+				3DD93D2D1DDBA6FB0091569A /* BasketSelectorViewController.m */,
+				3DA627551DDEDFD300331C00 /* BasketDetailViewController.h */,
+				3DA627561DDEDFD300331C00 /* BasketDetailViewController.m */,
 				3DD93D2F1DDBA6FB0091569A /* Main.storyboard */,
 				3DD93D321DDBA6FB0091569A /* Assets.xcassets */,
 				3DD93D341DDBA6FB0091569A /* LaunchScreen.storyboard */,
 				3DD93D371DDBA6FB0091569A /* Info.plist */,
 				3DD93D261DDBA6FB0091569A /* Supporting Files */,
+				3DA627581DDEE2EE00331C00 /* DecimalSupport.h */,
+				3DA627591DDEE2EE00331C00 /* DecimalSupport.m */,
 			);
 			path = SalesTaxes;
 			sourceTree = "<group>";
@@ -316,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD93D2E1DDBA6FB0091569A /* ViewController.m in Sources */,
+				3DD93D2E1DDBA6FB0091569A /* BasketSelectorViewController.m in Sources */,
 				3DD93D571DDBC4DB0091569A /* TaxCalculator.m in Sources */,
 				3D73B87B1DDDB03300F8E62A /* ReceiptGenerator.m in Sources */,
 				3DD93D531DDBBAF10091569A /* ApplicableTaxRule.m in Sources */,
@@ -328,7 +338,9 @@
 				3D73B8811DDDB1B900F8E62A /* ReceiptItem.m in Sources */,
 				3D8B82AB1DDD8D4A0046D237 /* ProductBasket.m in Sources */,
 				3DD93D281DDBA6FB0091569A /* main.m in Sources */,
+				3DA6275A1DDEE2EE00331C00 /* DecimalSupport.m in Sources */,
 				3DD93D671DDD7D590091569A /* TaxCalculatorUtils.m in Sources */,
+				3DA627571DDEDFD300331C00 /* BasketDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
